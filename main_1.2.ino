@@ -31,6 +31,7 @@ void handleRoot() {
   for (uint8_t i=0; i<server.args(); i++){
     message += " " + server.argName(i) + ": " + server.arg(i) + "<br>";
   }
+  // Ajax Headers
   String header ="HTTP/1.1 200 OK\r\nAccess-Control-Allow-Origin:*\r\nAccess-Control-Allow- Methods:GET, PUT \r\n";
   header += "Access-Control-Allow-Headers *AUTHORISED*\r\nContent-type: text/html\r\nServer: ESP8266-1\r\n\n";
   
